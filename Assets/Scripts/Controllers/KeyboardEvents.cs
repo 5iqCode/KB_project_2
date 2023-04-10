@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyboardEvents : MonoBehaviour
 {
@@ -8,21 +9,30 @@ public class KeyboardEvents : MonoBehaviour
 
     public GameObject _takedBlock;
 
+    [SerializeField] private Slider _fatigue;
+
     [SerializeField] private float _takeDistance;// дальность поднятия блока
     [SerializeField] private float _tossDistance; //дальность выкидывания блока
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+           
             if (_takedBlock != null)
             {
                 TossBlock();
             }
             else
             {
-                TryToTakeBlock();
+                if (_fatigue.value > (_fatigue.maxValue / 10))
+                {
+                    TryToTakeBlock();
+                }
+                else
+                {
+                    Debug.Log("Вы устали");
+                }
             }
-            
         }
     }
     public void TossBlock() // бросить блок

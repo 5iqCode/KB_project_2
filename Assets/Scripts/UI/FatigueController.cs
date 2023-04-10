@@ -31,6 +31,13 @@ public class FatigueController : MonoBehaviour
         _KeyboardEvents = GameObject.Find("MainHero").GetComponent<KeyboardEvents>();
     }
 
+    private void Start()
+    {
+        float _MaxFatigue = GameObject.Find("Main Camera").GetComponent<GlobalObjects>()._MaxFatigue;
+
+        _sliderFatigue.maxValue = _MaxFatigue;
+    }
+
     private void FixedUpdate()
     {
         _takedBlock = _playerController._takedBlock;
