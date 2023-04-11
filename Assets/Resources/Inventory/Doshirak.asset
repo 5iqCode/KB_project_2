@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c6d275cd2eca47b96451faa218b7a, type: 3}
+  m_Name: Doshirak
+  m_EditorClassIdentifier: 
+  Name: Doshirak
+  Icon: {fileID: 21300000, guid: f952ee18fd80f964390ea4fc46f86c1a, type: 3}
+  Sprite: {fileID: 21300000, guid: f952ee18fd80f964390ea4fc46f86c1a, type: 3}
+  CanEat: 1
+  HungryIfEat: -3
+  StressIfEat: -1
+  FatigueIfEat: 100
+  HpIfEat: -10

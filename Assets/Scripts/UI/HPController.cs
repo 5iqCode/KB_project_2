@@ -10,4 +10,13 @@ public class HPController : MonoBehaviour
         Debug.Log(_totalCost + "    " + _totalCost / 100);
         GetComponent<Slider>().value -= _totalCost / 100;
     }
+
+    public IEnumerator DamageHpBecouseHangry(float _damageBecouseHangry)
+    {
+        while (true)
+        {
+            GetComponent<Slider>().value -= _damageBecouseHangry;
+            yield return new WaitForSeconds(1);
+        }
+    }
 }
